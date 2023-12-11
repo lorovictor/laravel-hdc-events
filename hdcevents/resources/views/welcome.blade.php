@@ -4,44 +4,28 @@
 
 @section('content')
 
-    <div class="text-center" style="margin-top:10px;">
-        <h1>HORA DE CODAR</h1>
+    <div id="search-container" class="col-md-12">
+        <h1>Busque um evento</h1>
+        <form action="">
+            <input type="text" id="search" name="search" class="form-control" placeholder="Procurar...">
+        </form>
+    </div>
 
-        <img src="/img/eventos.jpg" alt="Eventos">
-
-        @if(10 > 5)
-            <p>A condição é true</p>
-        @endif
-
-        <p>{{ $nome }}</p>
-
-        @if($nome == "Pedro")
-            <p>O nome é Pedro</p>
-        @elseif ($nome == "Matheus")
-            <p>O nome é {{$nome}} e ele tem {{$idade}} anos e ele é um {{$profissao}}</p>
-        @else
-            <p>O nome não é Pedro</p>
-        @endif
-
-        @for($i=0; $i < count($arr); $i++)
-            <p>{{ $arr[$i] }} - {{$i}}</p>
-            @if ($i == 2)
-                <p>O i é igual a 2</p>
-            @endif
-        @endfor
-
-        @foreach($nomes as $nome)
-            <p>{{ $nome }}</p>
-            <p>{{ $loop->index }}</p>
-        @endforeach
-
-        @php
-            $name = "Lucas";
-            echo $name;
-        @endphp
-
-        <!-- O comentário do HTML -->
-        {{-- Comentário no Blade --}}
+    <div id="events-container" class="col-md-12">
+        <h2>Próximos Eventos</h2>
+        <p>Veja os eventos dos róximos dias</p>
+        <div id="cards-container" class="row">
+            @foreach ($events as $event)
+                <div class="card col-md-3">
+                    <img src="/img/event_placeholder.jpg" alt="{{ $event->title }}">
+                </div>
+                <div class="card-body">
+                    <p class="card-date">10/12/2023</p>
+                    <h5 class="card-title">{{ $event->title }}</h5>
+                    <p class="card-participantes">X Participantes</p>
+                </div>
+            @endforeach
+        </div>
     </div>
 
 @endsection
