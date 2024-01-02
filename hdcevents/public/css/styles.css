@@ -182,7 +182,7 @@ input [text], select {
 }
 
 #description-container {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 #items-list {
@@ -196,6 +196,26 @@ input [text], select {
 
 #items-list ion-icon {
     margin-top: 3px;
+}
+
+/* Dashboard */
+.dashboard-title-container {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.dashboard-events-container th {
+    width: 25%;
+}
+
+.dashboard-events-container form {
+    display: inline;
+}
+
+/* Edit page */
+.img-preview {
+    width: 100px;
+    margin-top: 20px;
 }
 
 /* Footer */
