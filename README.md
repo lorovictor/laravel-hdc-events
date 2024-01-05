@@ -1,7 +1,7 @@
-## HDC Events
+## LARAVEL PROJECTS
 
 **Passo 01 - Clonar projeto**   
-`git clone https://github.com/lordjack/tai_aula_2020_laravel`
+`git clone [https://github.com/lorovictor/laravel-projects.git]`
 
 ### Comandos para serem feitos após clonar o projeto, executar os comando abaixo dentro do diretorio do projeto
 
